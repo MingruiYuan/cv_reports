@@ -6,7 +6,7 @@ This project does research on spoofing effects of synthetic speech on speaker ve
 
 ## Text-to-speech Model
 
-![model2](D:\study_materials\summer_internship\presentation\model2.png)
+![model2](../src/model2.png)
 
 We basically follow [1] which proposed an efficient TTS model only consisting of 1D convolutional layers. The original work is for single speaker TTS and we adapt it for multi-speaker TTS with the assistance of speaker embeddings extracted by **Deep Speaker** [2] implementation on github.  The model contains two sub-models: **Text2Mel** and **SSRN**.
 
@@ -83,5 +83,5 @@ we also plot the curve between spoof rate and false rejection rate in real speec
 
 #### Google's GE2E curve (SR vs. FRR in real speech)
 
-![curve](D:\study_materials\summer_internship\presentation\curve.png)
+![curve](../src/curve.png)
 
