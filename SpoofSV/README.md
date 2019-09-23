@@ -32,21 +32,17 @@ SSRN (Spectrogram Super Resolution Networks) performs super resolution along tim
 
 #### Text2Mel
 
-$$
-L_{Text2Mel} =\ \mathbb{E}_{ft}[|\mathbf{Y-S}|]+\mathbb{E}_{ft}[-\mathbf{S}log\mathbf{Y}-(1-\mathbf{S})log(1-\mathbf{Y})]+L_{attention}
-$$
+![Cr1](../src/Cr1.png)
 
 where
-$$
-L_{attention} = \mathbb{E}_{nt}[\mathbf{A}\odot \mathbf{W}]\\W_{nt} = 1-e^{-(\frac{n}{N}-\frac{t}{T})^2}
-$$
-This means that penal effects rise with the increasing distance from diagonal.
+
+![Cr2](../src/Cr2.png)
+
+Suppose the sentence has N characters and T frames and current positions are n, t. This means that penal effects rise with the increasing distance from diagonal.
 
 #### SSRN
 
-$$
-L_{SSRN} =\ \mathbb{E}_{ft}[|\mathbf{Y-S}|]+\mathbb{E}_{ft}[-\mathbf{S}log\mathbf{Y}-(1-\mathbf{S})log(1-\mathbf{Y})]
-$$
+![Cr3](../src/Cr3.png)
 
 **Y** denotes predicted spectrograms and **S** denotes corresponding ground-truth.
 
@@ -64,7 +60,7 @@ There are several differences in training stage and inference stage. In training
 
 This corpus contains 109 English speakers and each speaker has around 400 utterances (~0.5 hour). We eliminate Speaker p315 for the absence of its texts.
 
-##### **ASVSpoof2019, Logical Access ** 
+##### ASVSpoof2019, Logical Access
 
 | Subset             | \# Male spks | \# Female spks | \# Real utts | \# Fake utts |
 | ------------------ | ------------ | -------------- | ------------ | ------------ |
@@ -149,3 +145,18 @@ We choose two variants **V1** , **V2** of the discriminator that we use in the G
 | **V1**        | 42.56% |
 | **V2**        | 36.21% |
 
+## 3.References
+
+[1] Hideyuki Tachibana, Katsuya Uenoyama, and Shunsuke Aihara, “Efficiently trainable text-to-speech system based on deep convolutional networks with guided attention,” in 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2018, pp. 4784–4788.
+
+[2] Chao Li, Xiaokong Ma, Bing Jiang, Xiangang Li, Xuewei Zhang, Xiao Liu, Ying Cao, Ajay Kannan, and Zhenyao Zhu, “Deep speaker: an end-to-end neural speaker embedding system,” CoRR, vol. abs/1705.02304, 2017.
+
+[3] Yuxuan Wang, RJ Skerry-Ryan, Daisy Stanton, Yonghui Wu, Ron J Weiss, Navdeep Jaitly, Zongheng Yang, Ying Xiao, Zhifeng Chen, Samy Bengio, et al., “Tacotron: Towards end-to-end speech synthesis,” arXiv preprint arXiv:1703.10135, 2017.
+
+[4] Jonathan Shen, Ruoming Pang, Ron J Weiss, Mike Schuster, Navdeep Jaitly, Zongheng Yang, Zhifeng Chen, Yu Zhang, Yuxuan Wang, Rj Skerrv-Ryan, et al., “Natural tts synthesis by conditioning wavenet on mel spectrogram predictions,” in 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2018, pp. 4779–4783.
+
+[5] Nal Kalchbrenner, Erich Elsen, Karen Simonyan, Seb Noury, Norman Casagrande, Edward Lockhart, Florian Stim-berg, Aaron van den Oord, Sander Dieleman, and Koray Kavukcuoglu, “Efficient neural audio synthesis,” arXiv preprint arXiv:1802.08435, 2018.
+
+[6] Yu-An Chung, Yuxuan Wang, Wei-Ning Hsu, Yu Zhang, and RJ Skerry-Ryan, “Semi-supervised training for improving data efficiency in end-to-end speech synthesis,” in ICASSP 2019- 2019 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2019, pp. 6940–6944.
+
+[7] Yu Zhang, Ron J Weiss, Heiga Zen, Yonghui Wu, Zhifeng Chen, RJ Skerry-Ryan, Ye Jia, Andrew Rosenberg, and Bhuvana Ramabhadran, “Learning to speak fluently in a foreign language: Multilingual speech synthesis and cross-language voice cloning,” arXiv preprint arXiv:1907.04448, 2019.
