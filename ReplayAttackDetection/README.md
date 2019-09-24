@@ -12,17 +12,17 @@ We follow [1] to extract acoustic features.  [1] proposed two features: centroid
 
 Firstly, we use **C** 2*nd* IIR bandpass filters
 
-![bandpass](D:\申请材料\demo-master\src\bandpass.png)
+![bandpass](../src/bandpass.png)
 
 Then we do **k** differentiation between adjacent filters then we can get higher order filters. Finally, we apply STFT on each output and use spectrograms to compute features.
 
 **centroid frequency (CF)**
 
-![CF](D:\申请材料\demo-master\src\CF.png)
+![CF](../src/CF.png)
 
 **centroid magnitude (CM)**
 
-![CM](D:\申请材料\demo-master\src\CM.png)
+![CM](../src/CM.png)
 
 In our experiments, we use **CF** as features. we also use constant Q cepstral coefficients (CQCC). Besides, we calculate differentiation of features as well.
 
