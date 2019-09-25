@@ -145,6 +145,8 @@ We choose two variants **V1** , **V2** of the discriminator that we use in the G
 | **V1**        | 42.56% |
 | **V2**        | 36.21% |
 
+The results show that anti-spoofing systems fail to discriminate synthetic speech when their structures are partly or completely disclosed, which poses a threat to the safety of speaker verification systems even if they have anti-spoofing systems as a gate.
+
 ## 3.References
 
 [1] Hideyuki Tachibana, Katsuya Uenoyama, and Shunsuke Aihara, “Efficiently trainable text-to-speech system based on deep convolutional networks with guided attention,” in 2018 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2018, pp. 4784–4788.
