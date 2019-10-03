@@ -60,7 +60,7 @@ Then we did T=1000 measurements and got F1-score 0.874. (Precision=1.0, Recall=0
 
 We improved baseline and proposed level set estimation based on connectivity between each level set. The name is **ConnectLSE**. This algorithm improves the acquisition function.
 
-![lse11](D:\申请材料\demo-master\src\lse11.png)
+![lse11](../src/lse11.png)
 
 The first item is variance and the second item is about connectivity. The connectivity item prefers to choose unclassified points that have more classified points around themselves. In this way, the size of *L, H* can increase more quickly. We hope that it can improve the efficiency and get larger classified set with less measurements.
 
