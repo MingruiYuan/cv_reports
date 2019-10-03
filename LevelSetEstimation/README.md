@@ -50,7 +50,7 @@ Firstly, we did T=100 meaurements and modified $\beta$. The results show that hi
 
 ![lse9](../src/lse9.png)
 
-Then we did T=1000 measurements and got F1-score 0.874. (Precision=1.0, Recall=0.777) 
+Then we did T=1000 measurements and got F1-score 0.836. 
 
 ***Left: Level sets, Right: Position of measurement points***
 
