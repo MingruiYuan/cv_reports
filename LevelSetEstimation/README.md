@@ -32,7 +32,7 @@ Also, the algorithm maintains superlevel set *H*, sublevel set *L* and unclassif
 
 When we use *Q* rather than *C* in the acquisition function, it becomes
 
-![lse7](D:\申请材料\demo-master\src\lse7.png)
+![lse7](../src/lse7.png)
 
 this is *straddle* rule proposed by [2]. It achieves trade-off between **exploration** and **exploitation**. The first item prefers points with higher variance which means that these regions are seldom measured and we need to explore these regions. The second item prefers exploiting points near the threshold. A hyperparameter controls the trade-off.
 
