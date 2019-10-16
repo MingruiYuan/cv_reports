@@ -6,7 +6,7 @@ This project does research on spoofing effects of synthetic speech on speaker ve
 
 ## 1.Text-to-speech Model
 
-![model2](../src/model2.png)
+![model2](../src/model3.png)
 
 We basically follow [1] which proposed an efficient TTS model only consisting of 1D convolutional layers. The original work is for single speaker TTS and we adapt it for multi-speaker TTS with the assistance of speaker embeddings extracted by **Deep Speaker** [2] implementation on github.  It contains two sub-models: Text2Mel and SSRN.
 
